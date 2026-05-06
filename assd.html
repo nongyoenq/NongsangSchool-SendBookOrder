@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="https://school.nongkhai2.go.th/emis/pic_school/1035430040.jpg">
+<title>ระบบงานธุรการ โรงเรียนบ้านหนองแสง</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+body {
+    font-family: 'Sarabun', sans-serif;
+}
+</style>
+</head>
+
+<body class="bg-gradient-to-br from-blue-100 to-green-100 min-h-screen flex items-center justify-center">
+
+<div class="bg-white shadow-2xl rounded-3xl p-8 w-full max-w-3xl">
+
+    <!-- Header -->
+    <div class="items-center gap-4 mb-6">
+        <img src="https://nongyoenq.github.io/NongsangSchool-SendTasks/NongsangSchool-LOGO1-ver.png" class="w-90 h-auto" />
+        <div class="text-center">
+            <h1 class="text-xl font-semibold text-gray-700">โรงเรียนบ้านหนองแสง</h1>
+            <p class="text-gray-500">สพป. ยส เขต 1</p>
+        </div>
+    </div>
+
+    <!-- Title -->
+    <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold text-green-600">ระบบงานธุรการ</h2>
+        <p class="text-gray-500">โรงเรียนบ้านหนองแสง</p>
+    </div>
+
+    <!-- Buttons -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <button onclick="goPage('doc')" 
+            class="bg-blue-500 hover:bg-blue-600 text-white text-xl py-10 rounded-2xl shadow-lg transform hover:scale-105 transition">
+            📄 ส่งหนังสือราชการ
+        </button>
+
+        <button onclick="goPage('order')" 
+            class="bg-red-500 hover:bg-red-600 text-white text-xl py-10 rounded-2xl shadow-lg transform hover:scale-105 transition">
+            📑 คำสั่งโรงเรียน
+        </button>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-10 text-center text-sm text-gray-400">
+        © 2026 Powered by bayoenq | Version 1.0 Modern UI
+    </div>
+
+</div>
+
+<!--script>
+function goPage(type) {
+    Swal.fire({
+        title: 'กำลังเข้าสู่ระบบ...',
+        text: type === 'doc' ? 'ไปยังส่งหนังสือราชการ' : 'ไปยังคำสั่งโรงเรียน',
+        icon: 'info',
+        timer: 1200,
+        showConfirmButton: false
+    }).then(() => {
+        if(type === 'doc'){
+            document.forms[0].submit();
+        } else {
+            document.forms[0].submit();
+        }
+    });
+}
+</script-->
+
+<script>
+function goPage(type) {
+    Swal.fire({
+        title: 'กำลังเข้าสู่ระบบ...',
+        text: type === 'doc' ? 'ไปยังส่งหนังสือราชการ' : 'ไปยังคำสั่งโรงเรียน',
+        icon: 'info',
+        timer: 1200,
+        showConfirmButton: false
+    }).then(() => {
+        if(type === 'doc'){
+            window.location.href = 'send.html';
+        } else {
+            window.location.href = 'order.html';
+        }
+    });
+}
+</script>
+
+</body>
+</html>
